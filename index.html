@@ -13,10 +13,10 @@
             margin-right: 10px;
             border-radius: 10px;
         }
-        .cell p{
-            align-items: center;
+        .cell p {
             display: flex;
-            text-align: center;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -24,13 +24,15 @@
     <div id="app">
     {{ message }}
     <div class = "cell">
-        <p><center>1</center></p>
+        <p>1</p>
     </div>
     <script>
     var app = new Vue({
         el: '#app',
         data: {
-            message: 'Powodzenia'
+            message: 'Powodzenia',
+            rows: 10,
+            columns: 10
         }
     })
     </script>
