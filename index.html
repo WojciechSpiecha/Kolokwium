@@ -18,13 +18,23 @@
             align-items: center;
             justify-content: center;
         }
+        .container{
+            display:flex;
+            flex-direction: row;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <div id="app">
+        <div class="container" v-for='r in rows' >
+            <div  v-for='c in columns' >
+                <div class="cell">
+                    <div class="inside">{{r}},{{c}}</div>
+                </div>
+            </div>
+        </div>
     {{ message }}
-    <div class = "cell">
-        <p>1</p>
     </div>
     <script>
     var app = new Vue({
@@ -37,4 +47,4 @@
     })
     </script>
 </body>
-</html> 
+</html>
